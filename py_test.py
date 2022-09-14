@@ -7,11 +7,11 @@ while len(phone)!=10 or phone.isnumeric()==False:
     phone=input("Enter Valid Telephone Number : ")
 
 age=input("Enter Your Age : ")
-while int(age)<20 or int(age)>100  or age.isnumeric()==False:
+while len(age)==0 or int(age)<20 or int(age)>100  or age.isnumeric()==False:
     age=(input("Enter Valid Age : "))
          
 sal=input("Enter your salary : ")
-while int(sal)<0 or sal.isnumeric()==False:
+while len(sal)==0 or int(sal)<0 or sal.isnumeric()==False:
     sal=input("Enter Valid salary: ")
     
 city=input("Enter your city: ")
