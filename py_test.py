@@ -7,6 +7,7 @@ conn = mariadb.connect(
     database = "python_test",
 )
 cur= conn.cursor()
+conn.autocommit = True
 name=input("enter your name : ")
 while len(name)==0 or name.isalpha()== False:
     name=input("Enter Valid Name : ")
@@ -48,4 +49,4 @@ cur.execute(query,record)
 cur.execute("select name, phone, age, sal,city,dept from emp;")
 for (name,phone,age,sal,city,dept) in cur:
     print("Name:", {name},"Phone:", {phone},"Age:", {age},"Salary:", {sal},"City:", {city},"Dept:", {dept})
-    
+   
